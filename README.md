@@ -1,6 +1,6 @@
 # hw-17
 
-# Homework Assignment: Learning Flutter - Displaying Products, Viewing Product Details, Adding to Cart, Removing from Cart, and Navigating between Screens
+#  Assignment: <br> Displaying Products, Viewing Product Details, Adding to Cart, Removing from Cart, and Navigating between Screens
 
 ## Objective
 The objective of this assignment is to familiarize students with Flutter and provide hands-on practice in key concepts such as displaying products, viewing product details on separate screens, adding products to a cart, removing products from the cart, and navigating between screens.
