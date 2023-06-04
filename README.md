@@ -62,7 +62,11 @@ The objective of this assignment is to familiarize students with Flutter and pro
 5. **Navigation: (10%)**
    - Proper implementation of navigation between the main page and the cart screen.
 
-## Design :
+# Bonus: 
+### * Using Models
+### Using 2 Libraries from this or other  ( image_picker , lottie , badges , carousel_slider
+
+## Design Optional :
 
 https://www.figma.com/file/X6u500t1GTd8vRDy9GRPID/Ecommerce-pet-product-app-design-(Community)?type=design&node-id=0%3A1&t=u18qB5vTsgrDtkVg-1
 
