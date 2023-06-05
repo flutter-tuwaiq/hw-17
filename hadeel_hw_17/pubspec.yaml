@@ -1,0 +1,33 @@
+name: hadeel_hw_17
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.2 <4.0.0"
+
+dependencies:
+  badges: ^3.1.1
+  carousel_slider: ^4.2.1
+  flutter:
+    sdk: flutter
+  flutter_image_slideshow: ^0.1.5
+  lottie: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: lib/App/assets/fonts/Roboto-Light.ttf
+        - asset: lib/App/assets/fonts/Roboto-Medium.ttf
+        - asset: lib/App/assets/fonts/Roboto-Regular.ttf
+
+  assets:
+    - lib/App/assets/images/
