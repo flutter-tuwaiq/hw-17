@@ -16,20 +16,25 @@ class _CartPageState extends State<CartPage> {
       body: ListView(
         children: [
           const SizedBox(
-              height: 24,
+            height: 24,
+          ),
+          for (final name in ListData.listData)
+            Column(
+              children: [
+                Text(
+                  name,
+                  style: const TextStyle(fontSize: 18),
+                ),
+                const Icon(
+                  Icons.delete_forever_rounded,
+                  color: Colors.red,
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+              ],
             ),
-        for (final name in ListData.listData)
-        Column(
-
-          children: [
-            
-            Text(name,style: const TextStyle(fontSize: 18),),
-            const Icon(Icons.delete_forever_rounded,color: Colors.red,),
-            const SizedBox(
-              height: 24,
-            ),
-          ],
-        ),],
+        ],
       ),
     );
   }

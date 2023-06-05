@@ -32,10 +32,10 @@ class Data {
           imagePath: 'assets/p4.png',
           price: '\$93.2',
           description: 'this is prodect 4'),
-    )
+    ),
   ];
 }
 
-class ListData{
-  static List <String> listData=[];
+class ListData {
+  static List<String> listData = [];
 }

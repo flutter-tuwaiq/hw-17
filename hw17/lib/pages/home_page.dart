@@ -5,7 +5,6 @@ import 'package:hw17/pages/product_detail_page.dart';
 
 import '../components/brand_list.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -75,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ],
-          )
+          ),
         ],
       ),
     );
