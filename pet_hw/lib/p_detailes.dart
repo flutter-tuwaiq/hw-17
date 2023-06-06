@@ -8,17 +8,17 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'model/chat.dart';
 
-class ChatDetailsPage extends StatefulWidget {
-  const ChatDetailsPage({super.key, required this.chat});
+class DetailsPage extends StatefulWidget {
+  const DetailsPage({super.key, required this.chat});
 
   final Chat chat;
 
   @override
-  State<ChatDetailsPage> createState() => _ChatDetailsPageState();
+  State<DetailsPage> createState() => _DetailsPageState();
 }
 
-class _ChatDetailsPageState extends State<ChatDetailsPage> {
-  var cartlist = <ChatDetailsPage>[];
+class _DetailsPageState extends State<DetailsPage> {
+  var cartlist = <DetailsPage>[];
   // var current = ();
 
   int activeIndex = 0;
@@ -34,6 +34,7 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
       bottomSheet: Container(
         padding: const EdgeInsets.all(24),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
               child: ElevatedButton(
@@ -53,28 +54,24 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
             ),
 
 //add to cart
-/*
-            Expanded(
-              child:  ElevatedButton(
-              onPressed: () {
-                cartlist.add(ChatDetailsPage(chat: Data.cards[current].chat));
-              },
-              style: ElevatedButton.styleFrom(
-                  shape: StadiumBorder(), backgroundColor: Colors.black),
-              child: const Text(
-                'Get Started!!',
-                // style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                style: TextStyle(fontSize: 24),
-              ),
-            ),
-            )
 
-            */
+            Expanded(
+              child: ElevatedButton(
+                onPressed: () {
+                  // cartlist.add(DetailsPage(chat: Data.cards[current].chat));
+                },
+                style: ElevatedButton.styleFrom(
+                    shape: StadiumBorder(), backgroundColor: Colors.black),
+                child: const Text(
+                  'Add to cart',
+                  // style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            )
           ],
         ),
       ),
-
-
       appBar: AppBar(
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
@@ -86,9 +83,7 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
         actions: [Icon(Icons.search)],
       ),
       backgroundColor: const Color.fromARGB(255, 237, 239, 249),
-      body: 
-
-          Padding(
+      body: Padding(
         padding: const EdgeInsets.only(top: 8.0),
         child: Stack(
           children: [
@@ -148,7 +143,7 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
                               // mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
-                                  "AbocoFur Modern Velvet Fapric Lazy Chair",
+                                  "Pet Oatmeal Spray",
                                   style: TextStyle(
                                       fontStyle: FontStyle.normal,
                                       fontWeight: FontWeight.bold,
@@ -183,17 +178,6 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
                           SizedBox(
                             height: 20,
                           ),
-                          Row(
-                            children: [
-                              Icon(Icons.add),
-                              Text(
-                                " 1 ",
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 17),
-                              ),
-                              Icon(Icons.remove),
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -203,7 +187,7 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
                     const Row(
                       children: [
                         Text(
-                          "  Product Detailes ",
+                          "  Description: ",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         )
@@ -213,41 +197,11 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
                       padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Room Type",
-                                style: const TextStyle(
-                                    color: Colors.grey, fontSize: 14),
-                              ),
-                              Text("Color",
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 14)),
-                              Text("Material",
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 14)),
-                              Text("Dimentions",
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 14)),
-                              Text("Wight",
-                                  style: TextStyle(
-                                      color: Colors.grey, fontSize: 14))
-                            ],
+                          Text(
+                            "Sweet almond oil nourishes and provides a wonderful fragrance. 13 care ingredients such as Aloe vera, chamomile and panthenol nourish the coat and make it supple. Oatmeal spray conditioner remaining in the coat ",
+                            style: const TextStyle(
+                                color: Colors.grey, fontSize: 14),
                           ),
-                          SizedBox(
-                            width: 50,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Office , Living Room"),
-                              Text("Yellow"),
-                              Text("Textile, Velvet, Cotton"),
-                              Text("25.6x31.5"),
-                              Text("20.3 pound")
-                            ],
-                          )
                         ],
                       ),
                     ),

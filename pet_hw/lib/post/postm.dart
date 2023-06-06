@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_hw/chat_detaels.dart';
+import 'package:pet_hw/p_detailes.dart';
 import 'package:pet_hw/extinstions/context.dart';
 import 'package:pet_hw/post/data.dart';
 
@@ -33,7 +33,7 @@ class _ChatPageState extends State<ChatPage> {
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
               onTap: () {
-                context.pushPage(ChatDetailsPage(chat: Data.cards[index].chat));
+                context.pushPage(DetailsPage(chat: Data.cards[index].chat));
               },
               child: Data.cards[index],
             );

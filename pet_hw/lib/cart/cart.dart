@@ -15,7 +15,9 @@ class cart extends StatelessWidget {
           children: [Icon(Icons.pets_outlined), Text("PETLY")],
         ),
       ),
-      backgroundColor: Colors.orange,
+
+     
+      backgroundColor: Colors.white,
     );
   }
 }
