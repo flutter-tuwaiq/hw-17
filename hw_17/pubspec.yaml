@@ -1,0 +1,21 @@
+name: hw_17
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=2.19.6 <3.0.0"
+
+dependencies:
+  curved_navigation_bar: ^1.0.3
+  flutter:
+    sdk: flutter
+  line_icons: ^2.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
