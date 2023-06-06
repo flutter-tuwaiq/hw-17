@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hw17/Viows/sala.dart';
 
+import '../Extinshen/ExtensionBoton.dart';
 import 'Storeg.dart';
 
 class StorePage extends StatefulWidget {
@@ -104,12 +106,7 @@ class _StorePageState extends State<StorePage> {
                                 child: const Image(
                                     image: AssetImage("Imags/Product-2.png"))),
                             onTap: () {
-                              setState(() {
-                                Navigator.of(context)
-                                    .push(MaterialPageRoute(builder: (context) {
-                                  return const Storeg();
-                                }));
-                              });
+                              context.pushPage(const Storeg());
                             },
                           ),
                         ),
@@ -145,6 +142,31 @@ class _StorePageState extends State<StorePage> {
               ])),
         ],
       ),
+      bottomNavigationBar: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Row(
+              children: [
+                InkWell(
+                  child: const Icon(Icons.home, size: 50),
+                  onTap: () {
+                    context.pushPage(const StorePage());
+                  },
+                )
+              ],
+            ),
+            Row(
+              children: [
+                InkWell(
+                  child: const Icon(Icons.store, size: 50),
+                  onTap: () {
+                    context.pushPage(const Sala());
+                  },
+                )
+              ],
+            )
+          ]),
     );
   }
 }

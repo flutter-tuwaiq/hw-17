@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hw17/Extinshen/ExtensionBoton.dart';
+import 'package:hw17/Model/Model.dart';
+import 'package:hw17/Viows/sala.dart';
 
-import '../cuntenuow/Staricon.dart';
+import '../combonant/Staricon.dart';
+import 'StorePage.dart';
 
 class Storeg extends StatelessWidget {
   const Storeg({super.key});
@@ -91,8 +95,60 @@ Oatmeal spray conditioner remaining in the coat"""),
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  const Color.fromARGB(255, 250, 213, 103)),
-                          onPressed: () {},
+                                  const Color.fromRGBO(255, 215, 64, 1)),
+                          onPressed: () {
+                            context.pushPage(const Sala());
+
+                            sala = Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 16, right: 16),
+                              child: Column(children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(0.0),
+                                  child: Container(
+                                    color: Colors.white,
+                                    child: Row(
+                                      children: [
+                                        const Image(
+                                            image: AssetImage(
+                                                "Imags/Product-2.png")),
+                                        const SizedBox(
+                                          width: 30,
+                                        ),
+                                        const Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Text("Pet Oatmeal Spray")
+                                              ],
+                                            ),
+                                            Row(
+                                              children: [Text("\$233.4")],
+                                            ),
+                                            Row(
+                                              children: [ProductsEvaluation()],
+                                            )
+                                          ],
+                                        ),
+                                        InkWell(
+                                          child: const Icon(Icons.delete,
+                                              color: Color.fromARGB(
+                                                  255, 255, 28, 7)),
+                                          onTap: () {
+                                            context.pushPage(const Sala());
+                                            sala = const SizedBox(
+                                              width: 0,
+                                              height: 0,
+                                            );
+                                          },
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ]),
+                            );
+                          },
                           child: const Text("Add to Cart")),
                     ),
                     Padding(
@@ -111,7 +167,33 @@ Oatmeal spray conditioner remaining in the coat"""),
             ),
           )
         ],
-      ),
+      ),bottomNavigationBar: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Row(
+              children: [
+                InkWell(
+                  child: const Icon(Icons.home, size: 50),
+                  onTap: () {
+                    context.pushPage(const StorePage());
+                  },
+                )
+              ],
+            ),
+            Row(
+              children: [
+                InkWell(
+                  child: const Icon(Icons.store, size: 50),
+                  onTap: () {
+                    context.pushPage(const Sala());
+                  },
+                )
+              ],
+            )
+          ]),
     );
   }
+
+  void Extension() {}
 }
