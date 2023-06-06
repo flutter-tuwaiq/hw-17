@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 215, 64, 1),
+      backgroundColor: const Color.fromARGB(255, 0, 221, 255),
       body: Column(
         children: [
           const SizedBox(
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
           Container(
             height: 60,
             width: 350,
-            color: Colors.black,
+            color: const Color.fromARGB(255, 0, 221, 255),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 onPressed: () {

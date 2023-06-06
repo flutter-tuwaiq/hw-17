@@ -13,7 +13,7 @@ class Storeg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: const Color.fromARGB(255, 0, 221, 255),
           title: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -27,7 +27,7 @@ class Storeg extends StatelessWidget {
                   Text("PETLY", style: TextStyle(color: Colors.black))
                 ],
               ),
-              Icon(Icons.abc, color: Colors.black)
+              Icon(Icons.search, color: Color.fromARGB(255, 255, 255, 255))
             ],
           )),
       body: Column(
@@ -35,7 +35,7 @@ class Storeg extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 0.0),
             child: Container(
-              color: const Color.fromARGB(255, 254, 222, 127),
+              color: const Color.fromARGB(255, 6, 230, 255),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -53,7 +53,7 @@ class Storeg extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 64.0, right: 64, top: 16),
             child: Container(
-                color: const Color.fromARGB(255, 254, 222, 127),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -95,7 +95,7 @@ Oatmeal spray conditioner remaining in the coat"""),
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  const Color.fromRGBO(255, 215, 64, 1)),
+                                  const Color.fromARGB(255, 0, 204, 255)),
                           onPressed: () {
                             context.pushPage(const Sala());
 
@@ -108,13 +108,14 @@ Oatmeal spray conditioner remaining in the coat"""),
                                   child: Container(
                                     color: Colors.white,
                                     child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         const Image(
                                             image: AssetImage(
-                                                "Imags/Product-2.png")),
-                                        const SizedBox(
-                                          width: 30,
-                                        ),
+                                                "Imags/71fN75kIuwL 1.png"),
+                                            width: 100,
+                                            height: 130),
                                         const Column(
                                           children: [
                                             Row(
@@ -156,7 +157,7 @@ Oatmeal spray conditioner remaining in the coat"""),
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  const Color.fromARGB(255, 243, 182, 1)),
+                                  const Color.fromARGB(255, 0, 204, 255)),
                           onPressed: () {},
                           child: const Text("Buy Now")),
                       //عجزت تزبط معاي
@@ -167,7 +168,8 @@ Oatmeal spray conditioner remaining in the coat"""),
             ),
           )
         ],
-      ),bottomNavigationBar: Row(
+      ),
+      bottomNavigationBar: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
