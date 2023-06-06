@@ -1,42 +1,53 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_10/model/prodect.dart';
+class CartScreen extends StatefulWidget {
+  final List<String> cartItems; // يمكن استخدام نموذج بيانات (data model) أو مصفوفة لتمثيل العناصر المضافة إلى السلة
 
-class CartItem extends StatelessWidget {
-  const CartItem({
-    super.key,
-    required this.item,
-    required this.remove,
-  });
+  CartScreen({this.cartItems});
 
-  final Product item;
-  final Function() remove;
+  @override
+  _CartScreenState createState() => _CartScreenState();
+}
+
+class _CartScreenState extends State<CartScreen> {
+  void _removeCartItem(int index) {
+    setState(() {
+      widget.cartItems.removeAt(index); // يتم إزالة العنصر المحدد من السلة
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        leading: SizedBox(
-          width: MediaQuery.of(context).size.width * 0.35,
-          child: Text(
-            "${item.name} ",
-            style: const TextStyle(fontSize: 18),
-          ),
-        ),
-        title: Text(
-          "${item.price} SR",
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 18),
-        ),
-        trailing: InkWell(
-          onTap: () {
-            remove.call();
-          },
-          child: const Icon(
-            Icons.remove_circle,
-            color: Colors.red,
-          ),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Cart'),
       ),
+      body: widget.cartItems.isEmpty
+          ? Center(
+              child: Text('Your cart is empty'),
+            )
+          : ListView.builder(
+              itemCount: widget.cartItems.length,
+              itemBuilder: (context, index) {
+                return Dismissible(
+                  key: UniqueKey(),
+                  background: Container(color: Colors.red),
+                  direction: DismissDirection.endToStart,
+                  onDismissed: (direction) {
+                    _removeCartItem(index); 
+                  },
+                  child: ListTile(
+                    leading: Image.network(
+                        'https://via.placeholder.com/150x150.png')
+                    title: Text(widget.cartItems[index]),
+                    trailing: IconButton(
+                      icon: Icon(Icons.delete),
+                      onPressed: () {
+                        _removeCartItem(index); / 
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
     );
   }
 }
