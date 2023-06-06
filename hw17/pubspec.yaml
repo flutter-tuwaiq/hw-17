@@ -1,0 +1,31 @@
+name: hw17
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+   - Imags/Vector.png
+   - Imags/image 1.png
+   - Imags/image 4.png
+   - Imags/image 3.png
+   - Imags/image 2.png
+   - Imags/Product.png
+   - Imags/Product-2.png
+   - Imags/Product-3.png
+   - Imags/Product-4.png
+   - Imags/71fN75kIuwL 1.png
