@@ -1,10 +1,15 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
-import 'package:hw17_lujain/models/cart_model.dart';
-import 'package:hw17_lujain/models/prodct_model.dart';
+import 'package:hw17_lujain/extensions/next_page.dart';
+import 'package:hw17_lujain/views/cart.dart';
+import '../models/cart_model.dart';
+import '../models/prodct_model.dart';
 import '../constants/colors.dart';
 
 class Buttons extends StatelessWidget {
-  const Buttons({super.key});
+  const Buttons({super.key, required this.product});
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,8 @@ class Buttons extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(firstColor)),
               onPressed: () {
-                cartItem.add(products);
+                CartModel.removeProducts.add(product);
+                context.nextPage(Cart());
               },
               child: Text(
                 'Add to cart',

@@ -62,7 +62,7 @@ class ProductDetails extends StatelessWidget {
                         Details(product: product),
                         Image.asset('images/Group 20.png'),
                         SizedBox(height: 40),
-                        Buttons()
+                        Buttons(product: product)
                       ],
                     ),
                   ),

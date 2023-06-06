@@ -3,10 +3,17 @@
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:hw17_lujain/constants/colors.dart';
-import 'package:hw17_lujain/models/cart_model.dart';
+import 'package:hw17_lujain/extensions/next_page.dart';
+
+import '../components/products_cards.dart';
+import '../models/cart_model.dart';
+import '../models/prodct_model.dart';
+import 'product_details.dart';
 
 class Cart extends StatelessWidget {
-  const Cart({super.key});
+  Cart({super.key});
+
+  // late CartModel cart;
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +46,18 @@ class Cart extends StatelessWidget {
                     Colors.white24.withOpacity(0.5),
                     Colors.white70.withOpacity(0.5)
                   ]),
-                  child: Column(
-                    children: [cartItem],
-                  ),
+                  child: GridView.builder(
+                      itemCount: CartModel.removeProducts.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 20,
+                              crossAxisSpacing: 20,
+                              childAspectRatio: 0.75),
+                      itemBuilder: (context, index) => ProductCard(
+                          products: products[index],
+                          press: () => context.nextPage(
+                              ProductDetails(product: products[index])))),
                 ),
               ],
             ),
