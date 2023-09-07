@@ -1,8 +1,6 @@
 #  <br> Displaying Products, Viewing Product Details, Adding to Cart, Removing from Cart, and Navigating between Screens
 
 
-## Instructions
-
 1. **Displaying Products on the Main Page:**
    - Designing and implementing the main page of a Flutter application.
    - Creating a list of products containing their names, images, and brief descriptions.
