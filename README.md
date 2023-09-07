@@ -1,5 +1,3 @@
-# These Instructions explain exactly what i did. Check ScreenShots File
-
 #  Assignment: <br> Displaying Products, Viewing Product Details, Adding to Cart, Removing from Cart, and Navigating between Screens
 
 ## Objective
