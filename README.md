@@ -29,3 +29,5 @@
    - Implementing navigation capabilities that allow users to switch between the main page and the cart screen.
    - Including buttons, tabs, or any other suitable UI elements to enable seamless navigation.
 
+
+** Check The screenshots file.
