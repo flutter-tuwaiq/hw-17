@@ -30,4 +30,4 @@
    - Including buttons, tabs, or any other suitable UI elements to enable seamless navigation.
 
 
-** Check The screenshots file.
+* Check The screenshots file.
